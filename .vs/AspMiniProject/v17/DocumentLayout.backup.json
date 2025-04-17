@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\services\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\services\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\services\\interfaces\\isliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\services\\interfaces\\isliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "AspMiniProject\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "AspMiniProject\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T14:16:50.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T14:13:41.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwCAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T14:13:22.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAwI8AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T14:12:32.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Program.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Program.cs",
+              "RelativeToolTip": "AspMiniProject\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T14:11:28.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SliderController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T14:10:22.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SliderService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\SliderService.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Services\\SliderService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\SliderService.cs",
+              "RelativeToolTip": "AspMiniProject\\Services\\SliderService.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAwwDIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T14:08:51.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ISliderService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\Interfaces\\ISliderService.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Services\\Interfaces\\ISliderService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\Interfaces\\ISliderService.cs",
+              "RelativeToolTip": "AspMiniProject\\Services\\Interfaces\\ISliderService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T13:59:08.272Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
