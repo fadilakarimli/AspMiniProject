@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "About Page";
+}
+
+
+<!-- Page Banner Section Start-->
+    @await Component.InvokeAsync("AboutBanner")
+<!-- Page Banner Section End-->
+<!-- About Section Start-->
+@await Component.InvokeAsync("About")
+
+<!-- About Section End-->
+<!-- Team Section Start-->
+@await Component.InvokeAsync("Team")
+
+<!-- Team Section End-->
+<!-- Funfact Section Start-->
+@await Component.InvokeAsync("FunFact")
+
+<!-- Funfact Section End-->
+<!-- Client Section Start-->
+@await Component.InvokeAsync("Client")
+
+<!-- Client Section End-->

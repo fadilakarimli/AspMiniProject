@@ -2625,6 +2625,22 @@
       "PackagePath": "staticwebassets\\fonts\\ionicons28b5.woff"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\2ec5fec1-b24d-40e2-9d64-b313db79a767-1.jpg",
+      "PackagePath": "staticwebassets\\img\\2ec5fec1-b24d-40e2-9d64-b313db79a767-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\39183c6d-63f8-4734-9745-39ffa4f41e73.jpg",
+      "PackagePath": "staticwebassets\\img\\39183c6d-63f8-4734-9745-39ffa4f41e73.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\624be7f2-0961-433a-ae57-869ec8ff49a3-1.jpg",
+      "PackagePath": "staticwebassets\\img\\624be7f2-0961-433a-ae57-869ec8ff49a3-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\a75e1bdc-203b-4844-9b07-a1e662d04564-1.jpg",
+      "PackagePath": "staticwebassets\\img\\a75e1bdc-203b-4844-9b07-a1e662d04564-1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\about.jpg",
       "PackagePath": "staticwebassets\\img\\about.jpg"
     },
@@ -2731,6 +2747,14 @@
     {
       "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\comment\\3.jpg",
       "PackagePath": "staticwebassets\\img\\comment\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\d1365df5-2019-4ae3-a963-dbf508cb1e24-1.jpg",
+      "PackagePath": "staticwebassets\\img\\d1365df5-2019-4ae3-a963-dbf508cb1e24-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\f9709328-600b-40a0-9ca5-89a255775831.jpg",
+      "PackagePath": "staticwebassets\\img\\f9709328-600b-40a0-9ca5-89a255775831.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\favicon.ico",

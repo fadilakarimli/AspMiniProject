@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace AspMiniProject.ViewComponents.Home
+namespace AspMiniProject.ViewComponents
 {
     public class BlogViewComponent : ViewComponent
     {

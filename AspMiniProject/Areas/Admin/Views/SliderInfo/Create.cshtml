@@ -1,0 +1,26 @@
+﻿@model SliderInfoCreateVM
+
+<div class="container-fluid mt-4">
+    <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label for="sliderinfo">Discount</label>
+            <input asp-for="Discount" class="form-control" id="sliderinfo" maxlength="1000">
+            <span class="text-danger" asp-validation-for="Discount"></span>
+
+
+            <label for="sliderinfo">Title</label>
+            <input asp-for="Title" class="form-control" id="sliderinfo" maxlength="1000">
+            <span class="text-danger" asp-validation-for="Title"></span>
+
+            <label for="sliderinfo">Description</label>
+            <input asp-for="Description" class="form-control" id="sliderinfo" maxlength="1000">
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+            <input asp-for="Image" class="form-control" id="sliderinfo" maxlength="1000">
+            <span class="text-danger" asp-validation-for="Image"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>

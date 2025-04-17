@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace AspMiniProject.ViewComponents.Home
+namespace AspMiniProject.ViewComponents
 {
-    public class FooterViewComponent : ViewComponent
+    public class TeamViewComponent : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
