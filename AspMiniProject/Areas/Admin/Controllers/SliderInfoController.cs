@@ -74,6 +74,7 @@ namespace AspMiniProject.Areas.Admin.Controllers
             await _sliderInfoService.UpdateAsync(id, updatedSlider);
             return RedirectToAction(nameof(Index));
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)

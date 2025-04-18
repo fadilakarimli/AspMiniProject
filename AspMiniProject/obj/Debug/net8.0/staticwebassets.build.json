@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cuQIyEFcxlI93JCCP3flNulbFsLnK5miWnVyuRAQnfk=",
+  "Hash": "7uMIrMjmMno7BAo7v3NtBdEoIXCy0+kUqB7TG3NPCIM=",
   "Source": "AspMiniProject",
   "BasePath": "_content/AspMiniProject",
   "Mode": "Default",
@@ -12498,6 +12498,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\fonts\\ionicons28b5.woff"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\04ae9a5b-9710-4671-8ba8-a84d62fd68e5-2.jpg",
+      "SourceId": "AspMiniProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
+      "BasePath": "_content/AspMiniProject",
+      "RelativePath": "img/04ae9a5b-9710-4671-8ba8-a84d62fd68e5-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\04ae9a5b-9710-4671-8ba8-a84d62fd68e5-2.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\2bb621f0-9ea1-4981-b9e1-62d9d53c3690.jpg",
