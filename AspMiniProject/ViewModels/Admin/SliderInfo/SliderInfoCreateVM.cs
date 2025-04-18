@@ -8,7 +8,5 @@ namespace AspMiniProject.ViewModels.Admin.SliderInfo
         public string Discount { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        [Required]
-        public IFormFile Image { get; set; }
     }
 }

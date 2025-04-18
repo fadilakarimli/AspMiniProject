@@ -1,104 +1,85 @@
-﻿using AspMiniProject.Services.Interfaces;
+﻿using AspMiniProject.Models;
+using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.SliderInfo;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspMiniProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
     public class SliderInfoController : Controller
     {
         private readonly ISliderInfoService _sliderInfoService;
-        private readonly IWebHostEnvironment _env;
 
-        public SliderInfoController(ISliderInfoService sliderInfoService, IWebHostEnvironment env)
+        public SliderInfoController(ISliderInfoService sliderInfoService)
         {
             _sliderInfoService = sliderInfoService;
-            _env = env;
         }
-
-        [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _sliderInfoService.GetAllAsync());
+            var sliderInfos = await _sliderInfoService.GetAllAsync();
+            return View(sliderInfos);
         }
 
         [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
+        public IActionResult Create()
         {
-            if (id is null) return BadRequest();
-            try
-            {
-                return View(await _sliderInfoService.GetDetailAsync(id.Value));
-            }
-            catch { return NotFound(); }
+            return View();
         }
-
-        [HttpGet]
-        public IActionResult Create() => View();
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SliderInfoCreateVM request)
+        public async Task<IActionResult> Create(SliderInfoCreateVM vm)
         {
-            if (!ModelState.IsValid) return View(request);
+            if (!ModelState.IsValid) return View(vm);
 
-            try
+            var newSliderInfo = new SliderInfo
             {
-                await _sliderInfoService.CreateAsync(request, _env.WebRootPath);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
+                Title = vm.Title,
+                Description = vm.Description,
+                Discount = vm.Discount
+            };
+
+            await _sliderInfoService.CreateAsync(newSliderInfo);
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var sliderInfo = await _sliderInfoService.GetByIdAsync(id);
+            if (sliderInfo is null) return NotFound();
+
+            var vm = new SliderInfoEditVM
             {
-                ModelState.AddModelError("Image", ex.Message);
-                return View(request);
-            }
+                Title = sliderInfo.Title,
+                Description = sliderInfo.Description,
+                Discount = sliderInfo.Discount
+            };
+
+            return View(vm);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, SliderInfoEditVM vm)
+        {
+            if (!ModelState.IsValid) return View(vm);
 
+            var updatedSlider = new SliderInfo
+            {
+                Title = vm.Title,
+                Description = vm.Description,
+                Discount = vm.Discount
+            };
 
-
+            await _sliderInfoService.UpdateAsync(id, updatedSlider);
+            return RedirectToAction(nameof(Index));
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            try
-            {
-                await _sliderInfoService.DeleteAsync(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch { return NotFound(); }
+            await _sliderInfoService.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id is null) return BadRequest();
-            try
-            {
-                return View(await _sliderInfoService.GetEditVMAsync(id.Value));
-            }
-            catch { return NotFound(); }
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, SliderInfoEditVM request)
-        {
-            if (id is null) return BadRequest();
-            if (!ModelState.IsValid) return View(request);
-
-            try
-            {
-                await _sliderInfoService.EditAsync(id.Value, request);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(request);
-            }
-        }
-
     }
 }
