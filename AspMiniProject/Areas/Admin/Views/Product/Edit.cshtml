@@ -1,0 +1,73 @@
+﻿    @model ProductEditVM
+
+<form class="forms-sample" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    @{
+        var categories = ViewBag.Categories as List<SelectListItem>;
+    }
+
+    <div class="form-group">
+        <label asp-for="CategoryId">Choose Category</label>
+        @if (categories != null && categories.Any())
+        {
+            <select asp-for="CategoryId" class="form-control" asp-items="categories"></select>
+        }
+        else
+        {
+            <p>No categories available</p>
+        }
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Existing Images</label>
+        <div class="row">
+            @if (Model.ExistingImages != null && Model.ExistingImages.Count > 0)
+            {
+                for (int i = 0; i < Model.ExistingImages.Count; i++)
+                {
+                    <div class="col-md-3 text-center mb-3" id="image-@Model.ExistingImages[i].Id">
+                        <img src="~/img/@Model.ExistingImages[i].Img" width="100" height="100" class="mb-2" />
+
+                        <div class="form-check">
+                            <input type="radio" name="MainImageId" value="@Model.ExistingImages[i].Id"
+                                   class="form-check-input" @(Model.ExistingImages[i].IsMain ? "checked" : "") />
+                            <label class="form-check-label">Main</label>
+                        </div>
+
+                        <a asp-action="DeleteImage"
+                           asp-controller="Product"
+                           asp-area="Admin"
+                           asp-route-id="@Model.ExistingImages[i].Id"
+                           asp-route-productId="@Model.Id"
+                           class="btn btn-danger btn-sm mt-2">
+                            Delete
+                        </a>
+                    </div>
+                }
+            }
+
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label asp-for="Images">Add More Images:</label>
+        <input asp-for="Images" type="file" class="form-control" multiple />
+        <span class="text-danger" asp-validation-for="Images"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2">Submit</button>
+    <a asp-action="Index" class="btn btn-light">Cancel</a>
+</form>

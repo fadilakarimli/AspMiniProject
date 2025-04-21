@@ -9,7 +9,7 @@
                     <div class="single-banner">
                         <img src="~/img/@item.Image" alt="banner" />
                         <div class="banner-content @((item.Id % 2 == 0) ? "left" : "right")">
-                            <h1 class="white"><span>@item.Title</span></h1>
+                            <h1 class="white"><span>@Html.Raw(@item.Title)</span></h1>
                             <a href="#" class="button">Shop Now</a>
                         </div>
                     </div>

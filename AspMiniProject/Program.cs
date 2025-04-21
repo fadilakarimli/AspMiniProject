@@ -24,6 +24,9 @@ options.UseSqlServer(conString));
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 builder.Services.AddScoped<IBannerService , BannerService>();
+builder.Services.AddScoped<ICategoryService , CategoryService>();
+builder.Services.AddScoped<IProductService , ProductService>();
+builder.Services.AddScoped<INewsletterService , NewsletterService>();
 
 
 //builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()

@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="newsletter-section text-center pt-100 pb-120">
+    <h1>Subscribe to our Newsletter</h1>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+</div>
