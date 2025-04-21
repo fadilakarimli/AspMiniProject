@@ -33,7 +33,7 @@ namespace AspMiniProject.Services
 
         public async Task CreateAsync(SliderCreateVM request, string webRootPath)
         {
-            if (request.Image.CheckFileSize(100))
+            if (request.Image.CheckFileSize(600))
                 throw new Exception("Image size must be max 100KB");
 
             if (!request.Image.CheckFileType("image/"))
@@ -78,7 +78,7 @@ namespace AspMiniProject.Services
 
             if (request.Image != null)
             {
-                if (request.Image.CheckFileSize(100))
+                if (request.Image.CheckFileSize(600))
                     throw new Exception("Image size must be max 100KB");
 
                 if (!request.Image.CheckFileType("image/"))

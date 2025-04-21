@@ -23,6 +23,7 @@ options.UseSqlServer(conString));
 
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
+builder.Services.AddScoped<IBannerService , BannerService>();
 
 
 //builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()

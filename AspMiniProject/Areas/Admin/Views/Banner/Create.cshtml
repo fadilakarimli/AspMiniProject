@@ -1,0 +1,20 @@
+﻿@model BannerCreateVM
+
+<div class="container-fluid mt-4">
+    <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input asp-for="Title" class="form-control" id="title" maxlength="255" />
+            <span class="text-danger" asp-validation-for="Title"></span>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="image">Image</label>
+            <input asp-for="Photo" type="file" class="form-control" id="image" />
+            <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>

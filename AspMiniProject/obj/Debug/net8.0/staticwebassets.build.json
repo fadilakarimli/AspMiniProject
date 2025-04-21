@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7uMIrMjmMno7BAo7v3NtBdEoIXCy0+kUqB7TG3NPCIM=",
+  "Hash": "lyHZQKeGgxqnoy2/nD6qf7JbyWdFZgjtjSjXYHDcRKQ=",
   "Source": "AspMiniProject",
   "BasePath": "_content/AspMiniProject",
   "Mode": "Default",
@@ -12519,6 +12519,25 @@
       "OriginalItemSpec": "wwwroot\\img\\04ae9a5b-9710-4671-8ba8-a84d62fd68e5-2.jpg"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\1fa397d3-349a-49cf-8548-5b7d13dc7b60_0edba0cc-a1ce-456b-83f4-c403b6bce89a.jpg",
+      "SourceId": "AspMiniProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
+      "BasePath": "_content/AspMiniProject",
+      "RelativePath": "img/1fa397d3-349a-49cf-8548-5b7d13dc7b60_0edba0cc-a1ce-456b-83f4-c403b6bce89a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\1fa397d3-349a-49cf-8548-5b7d13dc7b60_0edba0cc-a1ce-456b-83f4-c403b6bce89a.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\2bb621f0-9ea1-4981-b9e1-62d9d53c3690.jpg",
       "SourceId": "AspMiniProject",
       "SourceType": "Discovered",
@@ -13163,6 +13182,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\d1365df5-2019-4ae3-a963-dbf508cb1e24-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\eed40a85-e090-42d6-acc0-3cc24dabbeb4.png",
+      "SourceId": "AspMiniProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
+      "BasePath": "_content/AspMiniProject",
+      "RelativePath": "img/eed40a85-e090-42d6-acc0-3cc24dabbeb4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\eed40a85-e090-42d6-acc0-3cc24dabbeb4.png"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\f9709328-600b-40a0-9ca5-89a255775831.jpg",
