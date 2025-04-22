@@ -14,6 +14,10 @@ namespace AspMiniProject.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogImage> BlogImages { get; set; }
 
     }
 }

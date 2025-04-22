@@ -1,0 +1,22 @@
+﻿@model BlogDetailVM
+
+<div class="container mt-5">
+    <h2><strong>Title:</strong> @Model.Title</h2>
+    <p><strong>Description:</strong> @Model.Description</p>
+    <p><strong>Published Date:</strong> @Model.PublishedDate.ToShortDateString()</p>
+
+    <h4>Main Image</h4>
+    @foreach (var item in Model.MainImages)
+    {
+        <img src="~/img/@item" style="width:250px; height:200px; margin-right:10px;" />
+    }
+
+    <h4 class="mt-4">Other Images</h4>
+    @foreach (var image in Model.ExtraImages)
+    {
+        <img src="~/img/@image" style="width:150px; height:120px; margin-right:10px;" />
+    }
+
+    <br />
+    <a asp-action="Index" class="btn btn-light mt-4">Back</a>
+</div>

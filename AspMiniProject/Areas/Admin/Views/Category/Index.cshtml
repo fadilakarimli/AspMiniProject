@@ -21,7 +21,9 @@
                         <td>
                             <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-info">Detail</a>
                             <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
-                            <button class="btn btn-danger delete-category" data-id="@item.Id">Delete</button>
+                            <form class="d-inline" asp-action="Delete" asp-route-id="@item.Id" method="post">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 }

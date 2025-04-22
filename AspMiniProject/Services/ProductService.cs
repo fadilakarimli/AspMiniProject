@@ -34,23 +34,12 @@ namespace AspMiniProject.Services
             }).ToList();
         }
 
-        public async Task<ProductVM> GetProductByIdAsync(int id)
+        public async Task<Product> GetProductByIdAsync(int id)
         {
-            var product = await _context.Products
+            return await _context.Products
                 .Include(p => p.Category)
                 .Include(p => p.ProductImages)
                 .FirstOrDefaultAsync(p => p.Id == id);
-
-            if (product == null) return null;
-
-            return new ProductVM
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Price = product.Price,
-                CategoryName = product.Category?.Name ?? "No Category",
-                Image = product.ProductImages.FirstOrDefault(pi => pi.IsMain)?.Img
-            };
         }
 
         public async Task<Product> GetProductByIdForEditAsync(int id)

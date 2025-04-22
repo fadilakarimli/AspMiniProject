@@ -18,9 +18,8 @@ namespace AspMiniProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var categories = await _categoryService.GetAllCategoriesAsync(); 
-            var result = categories.Select(m => new CategoryVM { Id = m.Id, Name = m.Name });
-            return View(result);
+            var categories = await _categoryService.GetAllCategoriesAsync();
+            return View(categories); 
         }
 
         [HttpGet]
@@ -38,14 +37,8 @@ namespace AspMiniProject.Areas.Admin.Controllers
                 return View(request);
             }
 
-            var success = await _categoryService.CreateCategoryAsync(request);
-            if (!success)
-            {
-                ModelState.AddModelError("Name", "Category already exists");
-                return View(request);
-            }
-
-            return RedirectToAction(nameof(Index));
+            await _categoryService.CreateCategoryAsync(request); 
+            return RedirectToAction(nameof(Index));  
         }
 
         [HttpGet]
@@ -61,11 +54,8 @@ namespace AspMiniProject.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var success = await _categoryService.DeleteCategoryAsync(id);
-            if (!success)
-                return NotFound();
-
-            return Ok();
+            await _categoryService.DeleteCategoryAsync(id); 
+            return RedirectToAction(nameof(Index)); 
         }
 
         [HttpGet]
@@ -88,14 +78,8 @@ namespace AspMiniProject.Areas.Admin.Controllers
                 return View(request);
             }
 
-            var success = await _categoryService.EditCategoryAsync(id.Value, request);
-            if (!success)
-            {
-                ModelState.AddModelError("Name", "Category already exists");
-                return View(request);
-            }
-
-            return RedirectToAction(nameof(Index));
+            await _categoryService.EditCategoryAsync(id.Value, request);  
+            return RedirectToAction(nameof(Index));  
         }
     }
 }

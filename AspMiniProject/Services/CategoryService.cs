@@ -24,51 +24,49 @@ namespace AspMiniProject.Services
         public async Task<CategoryDetailVM> GetCategoryByIdAsync(int id)
         {
             var category = await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
-            if (category is null)
+            if (category == null)
                 return null;
 
             return new CategoryDetailVM { Name = category.Name };
         }
 
-        public async Task<bool> CreateCategoryAsync(CategoryCreateVM request)
+        public async Task CreateCategoryAsync(CategoryCreateVM request)
         {
             bool existsCategory = await _context.Categories.AnyAsync(m => m.Name.Trim() == request.Name.Trim());
             if (existsCategory)
             {
-                return false;
+                return;
             }
 
-            await _context.Categories.AddAsync(new Category { Name = request.Name });
+            var category = new Category { Name = request.Name };
+            await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
-            return true;
         }
 
-        public async Task<bool> EditCategoryAsync(int id, CategoryEditVM request)
+        public async Task EditCategoryAsync(int id, CategoryEditVM request)
         {
             var category = await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
-            if (category is null)
-                return false;
+            if (category == null)
+                return;
 
             bool existsCategory = await _context.Categories.AnyAsync(m => m.Name.Trim() == request.Name.Trim() && m.Id != category.Id);
             if (existsCategory)
             {
-                return false;
+                return;
             }
 
             category.Name = request.Name;
             await _context.SaveChangesAsync();
-            return true;
         }
 
-        public async Task<bool> DeleteCategoryAsync(int id)
+        public async Task DeleteCategoryAsync(int id)
         {
             var category = await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
-            if (category is null)
-                return false;
+            if (category == null)
+                return;
 
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
-            return true;
         }
     }
 }

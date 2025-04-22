@@ -1,0 +1,14 @@
+﻿@model CustomerCreateVM
+<form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="category">Full Name</label>
+        <input asp-for="FullName" class="form-control" id="category" maxlength="1000">
+        <span class="text-danger" asp-validation-for="FullName"></span>
+
+        <label for="image">Image</label>
+        <input asp-for="Image" class="form-control" id="image" type="file" />
+        <span class="text-danger" asp-validation-for="Image"></span>
+    </div>
+    <button type="submit" class="btn btn-primary me-2">Submit</button>
+    <a asp-action="Index" class="btn btn-light">Cancel</a>
+</form>

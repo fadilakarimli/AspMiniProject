@@ -1,0 +1,64 @@
+﻿@model BlogEditVM
+
+<form class="forms-sample" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PublishedDate"></label>
+        <input asp-for="PublishedDate" class="form-control" type="date" />
+        <span asp-validation-for="PublishedDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Existing Images</label>
+        <div class="row">
+            @if (Model.ExistingImages != null && Model.ExistingImages.Count > 0)
+            {
+                for (int i = 0; i < Model.ExistingImages.Count; i++)
+                {
+                    <div class="col-md-3 text-center mb-3" id="image-@Model.ExistingImages[i].Id">
+                        <img src="~/img/@Model.ExistingImages[i].ImagePath" width="100" height="100" class="mb-2" />
+
+                        <div class="form-check">
+                            <input type="radio" name="MainImageId" value="@Model.ExistingImages[i].Id"
+                                   class="form-check-input" @(Model.ExistingImages[i].IsMain ? "checked" : "") />
+                            <label class="form-check-label">Main</label>
+                        </div>
+
+                        <a asp-action="DeleteImage"
+                           asp-controller="Blog"
+                           asp-area="Admin"
+                           asp-route-id="@Model.ExistingImages[i].Id"
+                           asp-route-blogId="@Model.Id"
+                           class="btn btn-danger btn-sm mt-2">
+                            Delete
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="form-group mt-3">
+        <label asp-for="Images">Add More Images:</label>
+        <input asp-for="Images" type="file" class="form-control" multiple />
+        <span class="text-danger" asp-validation-for="Images"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2">Submit</button>
+    <a asp-action="Index" class="btn btn-light">Cancel</a>
+</form>

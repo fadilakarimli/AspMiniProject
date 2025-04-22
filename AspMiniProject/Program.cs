@@ -27,6 +27,9 @@ builder.Services.AddScoped<IBannerService , BannerService>();
 builder.Services.AddScoped<ICategoryService , CategoryService>();
 builder.Services.AddScoped<IProductService , ProductService>();
 builder.Services.AddScoped<INewsletterService , NewsletterService>();
+builder.Services.AddScoped<ICustomerService , CustomerService>();
+builder.Services.AddScoped<IReviewService , ReviewService>();
+builder.Services.AddScoped<IBlogService , BlogService>();
 
 
 //builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()

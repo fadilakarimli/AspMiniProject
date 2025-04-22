@@ -6,7 +6,8 @@ namespace AspMiniProject.Services.Interfaces
     public interface IProductService
     {
         Task<List<ProductVM>> GetAllProductsAsync();
-        Task<ProductVM> GetProductByIdAsync(int id);
+        Task<Product> GetProductByIdAsync(int id);
+
         Task CreateProductAsync(ProductCreateVM request);
         Task EditProductAsync(int id, ProductEditVM request);
         Task DeleteProductAsync(int id);
