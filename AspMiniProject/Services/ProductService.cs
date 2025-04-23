@@ -2,6 +2,7 @@
 using AspMiniProject.Models;
 using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.Product;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspMiniProject.Services
@@ -185,5 +186,4 @@ namespace AspMiniProject.Services
         }
 
     }
-
 }

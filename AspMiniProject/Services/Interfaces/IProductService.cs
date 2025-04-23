@@ -14,5 +14,6 @@ namespace AspMiniProject.Services.Interfaces
         Task<ProductDetailVM> GetDetailAsync(int id);
         Task<List<Category>> GetAllCategoriesAsync();
         Task<Product> GetProductByIdForEditAsync(int id);
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AspMiniProject.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
 
 namespace AspMiniProject.ViewModels.Admin.Product
@@ -11,9 +12,7 @@ namespace AspMiniProject.ViewModels.Admin.Product
         public int CategoryId { get; set; }
 
         public List<IFormFile>? Images { get; set; }
-
-        [Required(AllowEmptyStrings = true)]
-        public List<ProductImageVM> ExistingImages { get; set; }
+        public List<ProductImageVM> ExistingImages { get; set; } = new List<ProductImageVM>();
         public int MainImageId { get; set; }
     }
 }

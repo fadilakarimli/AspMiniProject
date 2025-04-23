@@ -82,17 +82,21 @@ namespace AspMiniProject.Areas.Admin.Controllers
             return View(productEditVM);
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Edit(int id, ProductEditVM model)
         {
+            ModelState.Remove(nameof(model.ExistingImages));
+
             if (!ModelState.IsValid)
             {
-                return View(model); 
-            }
-            if (model.ExistingImages == null)
-            {
-                model.ExistingImages = new List<ProductImageVM>();
+                var categoryList = await _productService.GetAllCategoriesAsync();
+                ViewBag.Categories = categoryList.Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Name
+                }).ToList();
+
+                return View(model);
             }
 
             await _productService.EditProductAsync(id, model);
@@ -100,20 +104,15 @@ namespace AspMiniProject.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> Delete(int id)
-        {
-            var product = await _productService.GetProductByIdAsync(id);
-            if (product == null) return NotFound();
-
-            return View(product);
-        }
-
         [HttpPost]
-        [ActionName("Delete")]
-        public async Task<IActionResult> DeletePost(int id)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
         {
             await _productService.DeleteProductAsync(id);
             return RedirectToAction(nameof(Index));
         }
+
+
+
     }
 }
