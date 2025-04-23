@@ -1,4 +1,6 @@
 ﻿
+@model CustomerReviewsVMVC
+
 <div class="testimonial-section section bg-gray pt-100 pb-65" style="background-image: url(img/bg/testimonial.png)">
     <div class="container">
 
@@ -15,29 +17,18 @@
                 <!-- Testimonial Slider Start -->
                 <div class="testimonial-slider text-center">
 
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <img src="img/testimonial/1.jpg" alt="customer">
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
-                        <h5>Betty Moore</h5>
-                    </div>
-
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <img src="img/testimonial/1.jpg" alt="customer">
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
-                        <h5>Betty Moore</h5>
-                    </div>
-
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <img src="img/testimonial/1.jpg" alt="customer">
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
-                        <h5>Betty Moore</h5>
-                    </div>
-
-                </div><!-- Testimonial Slider End -->
-
+                    @foreach (var item in Model.Customers)
+                    {
+                        @foreach (var review in item.Reviews)
+                        {
+                            <div class="single-testimonial">
+                                <img src="/img/@item.Image" alt="customer">
+                                <p>@review.Description</p>
+                                <h5>@item.FullName</h5>
+                            </div>
+                        }
+                    }
+                </div>
             </div>
         </div>
 

@@ -1,6 +1,8 @@
 ﻿using AspMiniProject.Models;
+using AspMiniProject.Services;
 using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.SliderInfo;
+using AspMiniProject.ViewModels.Admin.Team;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspMiniProject.Areas.Admin.Controllers
@@ -81,6 +83,23 @@ namespace AspMiniProject.Areas.Admin.Controllers
         {
             await _sliderInfoService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int id)
+        {
+            var team = await _sliderInfoService.GetByIdAsync(id);
+            if (team == null) return NotFound();
+
+            var vm = new SliderInfoDetailVM
+            {
+                Discount = team.Discount,
+                Title = team.Title,
+                Description = team.Description,
+            };
+
+            return View(vm);
         }
     }
 }

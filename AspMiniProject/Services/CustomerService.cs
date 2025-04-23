@@ -2,6 +2,7 @@
 using AspMiniProject.Models;
 using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.Customer;
+using AspMiniProject.ViewModels.Admin.Review;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspMiniProject.Services
@@ -18,13 +19,16 @@ namespace AspMiniProject.Services
         }
         public async Task<IEnumerable<CustomerVM>> GetAllCustomersAsync()
         {
-            var customers = await _context.Customers.ToListAsync();
-            return customers.Select(c => new CustomerVM
-            {
-                Id = c.Id,
-                FullName = c.FullName,
-                Image = c.Image
-            });
+            var customers = await _context.Customers.Include(y => y.Reviews).AsNoTracking()
+                                       .Select(c => new CustomerVM
+                                       {
+                                           Id = c.Id,
+                                           FullName = c.FullName,
+                                           Image = c.Image,
+                                           Reviews = c.Reviews.Select(c => new ReviewVM { Id = c.Id, Description =c.Description }).ToList(),  
+
+                                       }).ToListAsync();
+            return customers;
         }
 
         public async Task<CustomerDetailVM> GetCustomerByIdAsync(int id)

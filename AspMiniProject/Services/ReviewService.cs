@@ -48,11 +48,12 @@ namespace AspMiniProject.Services
 
         public async Task<IEnumerable<ReviewVM>> GetAllAsync()
         {
-            return await _context.Reviews
+            return await _context.Reviews.Include(y=>y.Customer).AsNoTracking()
                 .Select(r => new ReviewVM
                 {
                     Id = r.Id,
-                    Description = r.Description
+                    Description = r.Description,
+                    CustomerName = r.Customer.FullName,
                 }).ToListAsync();
         }
 
