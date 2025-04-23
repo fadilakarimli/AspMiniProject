@@ -7,7 +7,7 @@ namespace AspMiniProject.Services.Interfaces
     {
         Task<List<BlogVM>> GetAllBlogsAsync();
         Task<BlogVM> GetBlogByIdAsync(int id);
-        Task<Blog> GetBlogByIdForEditAsync(int id);
+        Task<BlogEditVM> GetBlogByIdForEditAsync(int id);
         Task CreateBlogAsync(BlogCreateVM request);
         Task EditBlogAsync(int id, BlogEditVM request);
         Task DeleteBlogAsync(int id);

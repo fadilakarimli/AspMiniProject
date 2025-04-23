@@ -56,11 +56,17 @@ namespace AspMiniProject.Services
             var exist = await _context.Teams.FindAsync(id);
             if (exist is null) throw new Exception("Teams info not found");
 
-            exist.FullName = team.FullName;
-            exist.Image = team.Image;
-            exist.Position = team.Position;
+            if (!string.IsNullOrWhiteSpace(team.FullName))
+                exist.FullName = team.FullName;
+
+            if (!string.IsNullOrWhiteSpace(team.Position))
+                exist.Position = team.Position;
+
+            if (!string.IsNullOrWhiteSpace(team.Image))
+                exist.Image = team.Image;
 
             await _context.SaveChangesAsync();
         }
+
     }
 }

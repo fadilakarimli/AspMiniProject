@@ -70,6 +70,70 @@ namespace AspMiniProject.Areas.Admin.Controllers
             return View(aboutEditVM);
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, AboutEditVM request)
+        {
+            if (id is null) return BadRequest();
+
+            if (!ModelState.IsValid) return View(request);
+
+            About dbAbout = await _context.Abouts.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
+            if (dbAbout == null) return NotFound();
+            bool isChanged = false;
+
+            if (request.Title != dbAbout.Title)
+            {
+                dbAbout.Title = request.Title;
+                isChanged = true;
+            }
+
+            if (request.Desc != dbAbout.Description)
+            {
+                dbAbout.Description = request.Desc;
+                isChanged = true;
+            }
+
+            if (request.Video != dbAbout.Video)
+            {
+                dbAbout.Video = request.Video;
+                isChanged = true;
+            }
+
+            if (request.Photo != null)
+            {
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Photo.FileName;
+                string uploadFolder = Path.Combine(_env.WebRootPath, "img");
+                string filePath = Path.Combine(uploadFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await request.Photo.CopyToAsync(fileStream);
+                }
+
+                dbAbout.Image = uniqueFileName;
+                isChanged = true;
+            }
+            else
+            {
+                dbAbout.Image = dbAbout.Image; 
+            }
+
+            if (isChanged)
+            {
+                _context.Abouts.Update(dbAbout);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Index));  
+        }
+
+
+
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
@@ -115,38 +179,6 @@ namespace AspMiniProject.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, AboutEditVM request)
-        {
-            if (id is null) return BadRequest();
-
-            About dbAbout = await _context.Abouts.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
-            if (dbAbout == null) return NotFound();
-
-            request.Image = dbAbout.Image;
-
-            if (!ModelState.IsValid) return View(request);
-
-            if (request.Photo != null)
-            {
-                if (!request.Photo.CheckFileType("image/"))
-                {
-                    ModelState.AddModelError("Photo", "File can be only image format");
-                    return View(request);
-                }
-
-                if (!request.Photo.CheckFileSize(200))
-                {
-                    ModelState.AddModelError("Photo", "File size can be max 200 kb");
-                    return View(request);
-                }
-            }
-
-            await _aboutService.EditAsync(request);
-
-            return RedirectToAction(nameof(Index));
-        }
     }
 
 }

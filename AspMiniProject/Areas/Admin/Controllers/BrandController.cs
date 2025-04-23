@@ -3,6 +3,7 @@ using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.Banner;
 using AspMiniProject.ViewModels.Admin.Brand;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspMiniProject.Areas.Admin.Controllers
 {
@@ -69,55 +70,51 @@ namespace AspMiniProject.Areas.Admin.Controllers
         {
             var brand = await _brandService.GetByIdAsync(id);
             if (brand is null) return NotFound();
-
             var vm = new BrandEditVM
             {
-              
+                Id = brand.Id,
                 Image = brand.Image
             };
 
+
             return View(vm);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, BrandEditVM vm)
+        public async Task<IActionResult> Edit(int id, BrandEditVM request)
         {
-            if (!ModelState.IsValid) return View(vm);
+            if (!ModelState.IsValid) return View(request);
 
-            var existingBrand= await _brandService.GetByIdAsync(id);
-            if (existingBrand == null) return NotFound();
+            var dbBrand = await _brandService.GetByIdAsync(id);
+            if (dbBrand == null) return NotFound();
 
-            string imageFileName = existingBrand.Image;
-
-            if (vm.Photo != null)
+            if (request.Photo != null)
             {
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Photo.FileName;
                 string uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img");
-                imageFileName = Guid.NewGuid().ToString() + "_" + vm.Photo.FileName;
-                string filePath = Path.Combine(uploadFolder, imageFileName);
+                string filePath = Path.Combine(uploadFolder, uniqueFileName);
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    await vm.Photo.CopyToAsync(fileStream);
+                    await request.Photo.CopyToAsync(fileStream);
                 }
 
-                string oldImagePath = Path.Combine(uploadFolder, existingBrand.Image);
+                string oldImagePath = Path.Combine(uploadFolder, dbBrand.Image);
                 if (System.IO.File.Exists(oldImagePath))
                 {
                     System.IO.File.Delete(oldImagePath);
                 }
+
+                dbBrand.Image = uniqueFileName;
             }
 
-            var updatedBrand= new Brand
-            {
-                Id = id,
-                Image = imageFileName
-            };
-
-            await _brandService.UpdateAsync(id, updatedBrand);
-
+            await _brandService.UpdateAsync(id, dbBrand);
             return RedirectToAction(nameof(Index));
         }
+
+
+
+
 
 
         [HttpPost]

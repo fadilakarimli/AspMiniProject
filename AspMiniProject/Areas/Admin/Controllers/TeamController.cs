@@ -81,18 +81,47 @@ namespace AspMiniProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, TeamEditVM vm)
         {
-            if (!ModelState.IsValid) return View(vm);
+            var team = await _teamService.GetByIdAsync(id);
+            if (team == null) return NotFound();
+
+            bool isChanged = false;
+
+            if (team.FullName != vm.FullName || team.Position != vm.Position || vm.Photo != null)
+            {
+                isChanged = true;
+            }
+
+            if (!isChanged)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            string newImageName = null;
+            if (vm.Photo != null)
+            {
+                string uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img");
+                newImageName = Guid.NewGuid().ToString() + "_" + vm.Photo.FileName;
+                string filePath = Path.Combine(uploadFolder, newImageName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await vm.Photo.CopyToAsync(fileStream);
+                }
+            }
 
             var updatedTeam = new Team
             {
-               Image = vm.Image,
-               FullName = vm.FullName,
-               Position = vm.Position,
+                FullName = vm.FullName,
+                Position = vm.Position,
+                Image = newImageName ?? team.Image
             };
 
             await _teamService.UpdateAsync(id, updatedTeam);
             return RedirectToAction(nameof(Index));
         }
+
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

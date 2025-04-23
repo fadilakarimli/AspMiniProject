@@ -9,7 +9,7 @@
 
         public List<IFormFile>? Images { get; set; }
 
-        public List<BlogImageVM> ExistingImages { get; set; }
+        public List<BlogImageVM> ExistingImages { get; set; } = new List<BlogImageVM>();
         public int MainImageId { get; set; }
     }
 }

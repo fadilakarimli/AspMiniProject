@@ -46,10 +46,26 @@ namespace AspMiniProject.Services
             };
         }
 
-        public async Task<Blog> GetBlogByIdForEditAsync(int id)
+        public async Task<BlogEditVM> GetBlogByIdForEditAsync(int id)
         {
-            return await _context.Blogs.Include(b => b.BlogImages).FirstOrDefaultAsync(b => b.Id == id);
+            var blog = await _context.Blogs.Include(b => b.BlogImages).FirstOrDefaultAsync(b => b.Id == id);
+            if (blog == null) return null;
+
+            return new BlogEditVM
+            {
+                Id = blog.Id,
+                Title = blog.Title,
+                Description = blog.Description,
+                PublishedDate = blog.PublishedDate,
+                ExistingImages = blog.BlogImages.Select(bi => new BlogImageVM
+                {
+                    Id = bi.Id,
+                    ImagePath = bi.ImagePath,
+                    IsMain = bi.IsMain
+                }).ToList()
+            };
         }
+
 
         public async Task CreateBlogAsync(BlogCreateVM request)
         {

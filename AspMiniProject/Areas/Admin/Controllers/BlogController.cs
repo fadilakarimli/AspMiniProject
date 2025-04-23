@@ -43,24 +43,29 @@ namespace AspMiniProject.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
             var blog = await _blogService.GetBlogByIdForEditAsync(id);
             if (blog == null) return NotFound();
 
-            return View(blog);
+            return View(blog); 
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Edit(int id, BlogEditVM model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.ExistingImages == null)
-                model.ExistingImages = new List<BlogImageVM>();
+            if (model.Images != null && model.Images.Count > 0)
+            {
+                await _blogService.EditBlogAsync(id, model);
+            }
+            else
+            {
+                await _blogService.EditBlogAsync(id, model);
+            }
 
-            await _blogService.EditBlogAsync(id, model);
             return RedirectToAction(nameof(Index));
         }
 
