@@ -1,5 +1,6 @@
 
 using AspMiniProject.Data;
+using AspMiniProject.Models;
 using AspMiniProject.Services;
 using AspMiniProject.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
@@ -19,7 +20,19 @@ var conString = builder.Configuration.GetConnectionString("Default") ??
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(conString));
 
+builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
+                                                     .AddDefaultTokenProviders();
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
 
+    options.User.RequireUniqueEmail = true;
+});
 
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
@@ -31,6 +44,8 @@ builder.Services.AddScoped<ICustomerService , CustomerService>();
 builder.Services.AddScoped<IReviewService , ReviewService>();
 builder.Services.AddScoped<IBlogService , BlogService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
 
 
 

@@ -1,4 +1,4 @@
-﻿@model HeaderVM
+﻿
 
         <!-- Header Section Start -->
 <div class="header-section section">
@@ -30,7 +30,21 @@
                             <!-- Account Menu -->
                             <div class="account-menu col-md-4 col-12">
                                 <ul>
-                                    <li><a href="#">My Account</a></li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <li class=""><a class="px-1" href="">@User.Identity.Name</a></li>
+                                        <form asp-controller="Account" asp-action="Logout" method="post">
+                                            <button type="submit" class="btn btn-primary">Logout</button>
+                                        </form>
+
+
+                                    }
+                                    else
+                                    {
+                                        <li class=""><a class="px-1" asp-controller="Account" asp-action="Login">Login</a></li>
+                                        <li class=""><a class="px-1" asp-controller="Account" asp-action="Register">Regsiter</a></li>
+
+                                    }
                                     <li><a href="wishlist.html">Wishlist</a></li>
                                     <li>
                                         <a href="#" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i><span class="num">2</span></a>
@@ -122,7 +136,12 @@
                                     <li><a href="blog-details.html">blog details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">contact</a></li>
+                           @*  <li><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a></li> *@
+
+                            @if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+                            {
+                                <li><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a></li>
+                            }
                         </ul>
                     </nav>
 

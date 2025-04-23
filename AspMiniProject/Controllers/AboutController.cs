@@ -22,13 +22,10 @@ namespace AspMiniProject.Controllers
 
     public async Task<IActionResult> Index()
     {
-        // 1. Bütün about məlumatlarını çək
         List<AboutVM> aboutList = await _aboutService.GetAllAsync();
 
-        // 2. İlk about məlumatını götür
         AboutVM about = aboutList.FirstOrDefault();
 
-        // 3. Yeni model yaradıb, içini doldur
         AboutPageVM model = new()
         {
             About = about,

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AspMiniProject.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Slider> Sliders { get; set; }
@@ -19,6 +19,8 @@ namespace AspMiniProject.Data
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Team> Teams { get; set; }
 
     }
 }

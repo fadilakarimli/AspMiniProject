@@ -51,13 +51,10 @@ namespace AspMiniProject.Services
             string? oldPath = null;
             string? fileName = null;
 
-            // Əgər yeni şəkil yüklənibsə
             if (request.Photo != null)
             {
-                // Yeni fayl adını təyin et
                 fileName = $"{Guid.NewGuid()} - {request.Photo.FileName}";
 
-                // Əgər əvvəlki şəkil varsa, onun pathini al
                 if (!string.IsNullOrWhiteSpace(request.Image))
                 {
                     oldPath = _env.GetFilePath("img", request.Image);
@@ -65,7 +62,6 @@ namespace AspMiniProject.Services
             }
             else
             {
-                // Əgər yeni şəkil yüklənməyibsə, köhnə şəkil saxlanılır
                 fileName = request.Image;
             }
 
@@ -80,7 +76,6 @@ namespace AspMiniProject.Services
             _context.Abouts.Update(dbAbout);
             await _context.SaveChangesAsync();
 
-            // Əgər yeni şəkil varsa, faylı yadda saxla və köhnəni sil
             if (request.Photo != null)
             {
                 if (!string.IsNullOrWhiteSpace(oldPath) && File.Exists(oldPath))
@@ -90,6 +85,21 @@ namespace AspMiniProject.Services
 
                 string newPath = _env.GetFilePath("img", fileName);
                 await request.Photo.SaveFileAsync(newPath);
+            }
+        }
+
+        public async Task CreateAsync(About about)
+        {
+            await _context.Abouts.AddAsync(about);
+            await _context.SaveChangesAsync();
+        }
+        public async Task DeleteAsync(int id)
+        {
+            var about = await _context.Abouts.FindAsync(id);
+            if (about is not null)
+            {
+                _context.Abouts.Remove(about);
+                await _context.SaveChangesAsync();
             }
         }
 

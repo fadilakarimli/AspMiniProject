@@ -4,7 +4,6 @@ namespace AspMiniProject.ViewModels.Admin.Team
 {
     public class TeamCreateVM
     {
-        public int Id { get; set; }
         [Required]
         public string FullName { get; set; }
         [Required]

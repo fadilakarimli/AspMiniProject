@@ -1,0 +1,22 @@
+﻿@model BrandCreateVM
+
+<div class="container-fluid mt-4">
+    <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+        
+        <div class="form-group mt-3">
+            <label for="image">Image</label>
+            <input asp-for="Photo" type="file" class="form-control" id="image" />
+            <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
+
+<script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+
+<script>
+    CKEDITOR.replace('editor')
+</script>
+

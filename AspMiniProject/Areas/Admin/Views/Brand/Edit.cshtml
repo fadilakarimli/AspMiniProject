@@ -1,0 +1,26 @@
+﻿@model BrandEditVM
+
+<div class="container-fluid mt-5">
+    <form class="forms-sample" asp-action="Edit" enctype="multipart/form-data" method="post">
+       
+
+        <div class="form-group mt-3">
+            <label for="image">Image</label>
+            <div>
+                @if (!string.IsNullOrEmpty(Model.Image))
+                {
+                    <img src="~/img/@Model.Image" alt="Current Image" style="width:150px; height:120px; margin-bottom:10px" />
+                }
+                else
+                {
+                    <p>Empty.</p>
+                }
+            </div>
+            <input asp-for="Photo" type="file" class="form-control" id="image" />
+            <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
