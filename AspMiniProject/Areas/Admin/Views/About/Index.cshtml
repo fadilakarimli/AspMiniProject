@@ -1,11 +1,12 @@
 ﻿﻿
-@model AboutVM
+@model IEnumerable<AboutVM>
 @{
 	ViewData["Title"] = "Index";
 }
 
 <div style="margin-right:100px" class="container mt-5">
 	<h1 class="text-center mt-3 mb-3">About</h1>
+	<a asp-action="Create" class="btn btn-success">Create</a>
 	<div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
@@ -34,28 +35,35 @@
 			</thead>
 			<tbody>
 
-				<tr>
-					<td class="py-1">
-						<img style="width:200px; height:150px" src="~/img/@Model.Image" alt="image" />
-					</td>
+			@foreach (var item in Model)
+				{
+					<tr>
+						<td class="py-1">
+							<img style="width:200px; height:150px" src="~/img/@item.Image" alt="image" />
+						</td>
 
-					<td style="white-space:normal">
-						@Html.Raw(Model.Title)
-					</td>
-					<td style="white-space:normal">
-						@Model.Description.Substring(0,35) ...
-					</td>
-					<td style="white-space:normal">
-						@Model.Video.Substring(0,15) ...
-					</td>
-					<th>
-						@Model.CreatedDate.ToString("dd/MM/yyyy")
-					</th>
-					<td>
-						<a class="btn btn-info" asp-action="Detail" asp-route-id="@Model.Id">Detail</a>
-						<a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+						<td style="white-space:normal">
+							@Html.Raw(item.Title)
+						</td>
+						<td style="white-space:normal">
+							@item.Description
+						</td>
+						<td style="white-space:normal">
+							@item.Video
+						</td>
+						<th>
+							@item.CreatedDate.ToString("dd/MM/yyyy")
+						</th>
+						<td>
+							<a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+							<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+							<form class="d-inline" asp-action="Delete" asp-route-id="@item.Id" method="post">
+								<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+							</form>
 
-				</tr>
+					</tr>
+					
+				}
 
 
 			</tbody>

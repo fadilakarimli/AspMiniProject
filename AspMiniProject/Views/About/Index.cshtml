@@ -1,4 +1,4 @@
-﻿@* @model AboutPageVM
+﻿@model AboutPageVM
 @{
     ViewData["Title"] = "Index";
 }
@@ -22,17 +22,22 @@
         <div class="row flex-row-reverse">
 
             <!-- About Image -->
-            <div class="about-image col-lg-6 col-12 mb-30">
-                <a class="video-popup" href="@Model.About.Video"><img src="~/img/@Model.About.Image" alt=""></a>
-            </div>
+            @foreach(var item in Model.Abouts)
+            {
+                <div class="about-image col-lg-6 col-12 mb-30">
+                    <a class="video-popup" href="@item.Video"><img src="~/img/@item.Image" alt=""></a>
+                </div>
 
-            <!-- Mission Content -->
-            <div class="about-content col-lg-6 col-12 mb-30">
-                @Html.Raw(Model.About.Title)
-                <p>@Model.About.Description</p>
-                <a href="#" class="button">Shop Now</a>
-            </div>
+                <!-- Mission Content -->
+                <div class="about-content col-lg-6 col-12 mb-30">
+                    @Html.Raw(item.Title)
+                    <p>@item.Description</p>
+                    <a href="#" class="button">Shop Now</a>
+                </div>
 
+                
+            }
+           
         </div>
     </div>
 </div><!-- About Section End-->
@@ -50,7 +55,7 @@
             @foreach (var team in Model.Teams)
             {
                 <div class="single-team col-lg-3 col-md-6 col-12">
-                    <img src="~/img/team/@team.Image" alt="team">
+                    <img src="~/img/@team.Image" alt="team">
                     <div class="content">
                         <h4>@team.FullName</h4>
                         <span>@team.Position</span>
@@ -119,7 +124,7 @@
                     <!-- Single Client -->
                     @foreach (var brand in Model.Brands)
                     {
-                        <div class="single-client"><img src="~/img/client/@brand.Image" alt="client"></div>
+                        <div class="single-client"><img src="~/img/@brand.Image" alt="client"></div>
 
                     }
 
@@ -130,4 +135,3 @@
         </div>
     </div>
 </div><!-- Client Section End-->
- *@
