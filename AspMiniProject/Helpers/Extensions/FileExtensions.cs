@@ -21,5 +21,16 @@
             }
 
         }
+        public async static Task SaveFileAsync(this IFormFile file, string path)
+        {
+            using (FileStream stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+        }
+        public static string GetFilePath(this IWebHostEnvironment env, string folder, string fileName)
+        {
+            return Path.Combine(env.WebRootPath, folder, fileName);
+        }
     }
 }

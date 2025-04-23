@@ -1,4 +1,6 @@
-﻿        <!-- Header Section Start -->
+﻿@model HeaderVM
+
+        <!-- Header Section Start -->
 <div class="header-section section">
 
     <!-- Header Top Start -->
@@ -103,7 +105,7 @@
                                     <li><a href="product-details.html">product details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="about.html">about</a></li>
+                            <li><a asp-controller="About" asp-action="Index">About</a></li>
                             <li>
                                 <a href="#">pages</a>
                                 <ul class="sub-menu">

@@ -18,6 +18,7 @@ namespace AspMiniProject.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
+        public DbSet<About> Abouts { get; set; }
 
     }
 }

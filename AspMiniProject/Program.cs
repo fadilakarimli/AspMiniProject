@@ -30,6 +30,8 @@ builder.Services.AddScoped<INewsletterService , NewsletterService>();
 builder.Services.AddScoped<ICustomerService , CustomerService>();
 builder.Services.AddScoped<IReviewService , ReviewService>();
 builder.Services.AddScoped<IBlogService , BlogService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+
 
 
 //builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()

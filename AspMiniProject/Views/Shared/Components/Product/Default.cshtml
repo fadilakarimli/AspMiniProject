@@ -17,7 +17,7 @@
                         <!-- Image Wrapper -->
                         <div class="image">
                             <!-- Image -->
-                            <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@product.Id" class="img">
+                            <a asp-controller="Product" asp-action="Index" asp-route-id="@product.Id" class="img">
                                 <img src="@Url.Content("~/img/" + product.Image)" alt="@product.Name">
                             </a>
                             <!-- Wishlist -->
