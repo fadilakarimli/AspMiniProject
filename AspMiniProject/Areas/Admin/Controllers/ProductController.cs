@@ -3,6 +3,7 @@ using AspMiniProject.ViewModels.Admin.Product;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace AspMiniProject.Areas.Admin.Controllers
 {
@@ -29,7 +30,6 @@ namespace AspMiniProject.Areas.Admin.Controllers
             return View(product);
         }
         [HttpGet]
-
         public async Task<IActionResult> Create()
         {
             var categories = await _productService.GetAllCategoriesAsync();
@@ -37,13 +37,14 @@ namespace AspMiniProject.Areas.Admin.Controllers
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProductCreateVM model)
         {
             if (!ModelState.IsValid)
             {
-                var categories = await _productService.GetAllProductsAsync();
+                var categories = await _productService.GetAllCategoriesAsync(); 
                 ViewBag.Categories = new SelectList(categories, "Id", "Name");
                 return View(model);
             }
@@ -51,6 +52,7 @@ namespace AspMiniProject.Areas.Admin.Controllers
             await _productService.CreateProductAsync(model);
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet]
 
         public async Task<IActionResult> Edit(int id)
         {
@@ -85,7 +87,10 @@ namespace AspMiniProject.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, ProductEditVM model)
         {
-            ModelState.Remove(nameof(model.ExistingImages));
+            if (model.Price <= 0)
+            {
+                ModelState.AddModelError(nameof(model.Price), "Price must be a positive number.");
+            }
 
             if (!ModelState.IsValid)
             {
@@ -100,8 +105,11 @@ namespace AspMiniProject.Areas.Admin.Controllers
             }
 
             await _productService.EditProductAsync(id, model);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index)); 
         }
+
+
+
 
 
         [HttpPost]

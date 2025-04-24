@@ -1,13 +1,19 @@
 ﻿@model CategoryCreateVM
 
 <div class="container-fluid mt-4">
-    <form class="forms-sample" asp-action="Create" method="post">
+    <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
         <div class="form-group">
-            <label for="category">Name</label>
-            <input asp-for="Name" class="form-control" id="category" maxlength="1000">
+            <label for="name">Category Name</label>
+            <input asp-for="Name" class="form-control" id="name" />
             <span class="text-danger" asp-validation-for="Name"></span>
         </div>
-        <button type="submit" class="btn btn-primary me-2">Submit</button>
-        <a asp-action="Index" class="btn btn-light">Cancel</a>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <a asp-action="Index" class="btn btn-light">Cancel</a>
 </div>  
+
+

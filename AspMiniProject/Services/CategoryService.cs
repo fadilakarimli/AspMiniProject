@@ -32,10 +32,15 @@ namespace AspMiniProject.Services
 
         public async Task CreateCategoryAsync(CategoryCreateVM request)
         {
-            bool existsCategory = await _context.Categories.AnyAsync(m => m.Name.Trim() == request.Name.Trim());
+            if (string.IsNullOrEmpty(request.Name) || !System.Text.RegularExpressions.Regex.IsMatch(request.Name, @"^[a-zA-Z\s]+$"))
+            {
+                throw new Exception("Category name can only contain letters and spaces.");
+            }
+
+            bool existsCategory = await _context.Categories.AnyAsync(m => m.Name.Trim().ToLower() == request.Name.Trim().ToLower());
             if (existsCategory)
             {
-                return;
+                throw new Exception("Category with the same name already exists.");
             }
 
             var category = new Category { Name = request.Name };

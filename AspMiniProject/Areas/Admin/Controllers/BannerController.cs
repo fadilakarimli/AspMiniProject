@@ -2,6 +2,7 @@
 using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.Banner;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspMiniProject.Areas.Admin.Controllers
 {
@@ -9,9 +10,12 @@ namespace AspMiniProject.Areas.Admin.Controllers
     public class BannerController : Controller
     {
         private readonly IBannerService _bannerService;
-        public BannerController(IBannerService bannerService)
+        private readonly IWebHostEnvironment _env;
+
+        public BannerController(IBannerService bannerService, IWebHostEnvironment env)
         {
             _bannerService = bannerService;
+            _env = env;
         }
 
         public async Task<IActionResult> Index()
@@ -81,44 +85,49 @@ namespace AspMiniProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, BannerEditVM vm)
+        public async Task<IActionResult> Edit(BannerEditVM model)
         {
-            if (!ModelState.IsValid) return View(vm);
-
-            var existingBanner = await _bannerService.GetByIdAsync(id);
-            if (existingBanner == null) return NotFound();
-
-            string imageFileName = existingBanner.Image;
-
-            if (vm.Photo != null)
+            if (!ModelState.IsValid)
             {
-                string uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img");
-                imageFileName = Guid.NewGuid().ToString() + "_" + vm.Photo.FileName;
-                string filePath = Path.Combine(uploadFolder, imageFileName);
+                return View(model);
+            }
 
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
+            var existBanner = await _bannerService.GetByIdAsync(model.Id);
+            if (existBanner == null) return NotFound();
+
+            string imageFileName = existBanner.Image!;
+
+            if (model.Photo != null)
+            {
+                imageFileName = Guid.NewGuid().ToString() + Path.GetExtension(model.Photo.FileName);
+                string filePath = Path.Combine(_env.WebRootPath, "img", imageFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    await vm.Photo.CopyToAsync(fileStream);
+                    await model.Photo.CopyToAsync(stream);
                 }
 
-                string oldImagePath = Path.Combine(uploadFolder, existingBanner.Image);
-                if (System.IO.File.Exists(oldImagePath))
+                if (!string.IsNullOrEmpty(existBanner.Image))
                 {
-                    System.IO.File.Delete(oldImagePath);
+                    string oldPath = Path.Combine(_env.WebRootPath, "img", existBanner.Image);
+                    if (System.IO.File.Exists(oldPath))
+                    {
+                        System.IO.File.Delete(oldPath);
+                    }
                 }
             }
 
             var updatedBanner = new Banner
             {
-                Id = id,
-                Title = vm.Title,
+                Id = model.Id,
+                Title = model.Title,
                 Image = imageFileName
             };
 
-            await _bannerService.UpdateAsync(id, updatedBanner);
-
+            await _bannerService.UpdateAsync(model.Id, updatedBanner);
             return RedirectToAction(nameof(Index));
         }
+
 
 
         [HttpPost]

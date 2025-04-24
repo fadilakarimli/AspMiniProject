@@ -70,15 +70,16 @@ namespace AspMiniProject.Areas.Admin.Controllers
         {
             var brand = await _brandService.GetByIdAsync(id);
             if (brand is null) return NotFound();
+
             var vm = new BrandEditVM
             {
                 Id = brand.Id,
                 Image = brand.Image
             };
 
-
             return View(vm);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, BrandEditVM request)
@@ -90,8 +91,8 @@ namespace AspMiniProject.Areas.Admin.Controllers
 
             if (request.Photo != null)
             {
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Photo.FileName;
                 string uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img");
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Photo.FileName;
                 string filePath = Path.Combine(uploadFolder, uniqueFileName);
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -99,21 +100,25 @@ namespace AspMiniProject.Areas.Admin.Controllers
                     await request.Photo.CopyToAsync(fileStream);
                 }
 
-                string oldImagePath = Path.Combine(uploadFolder, dbBrand.Image);
-                if (System.IO.File.Exists(oldImagePath))
+                if (!string.IsNullOrEmpty(dbBrand.Image))
                 {
-                    System.IO.File.Delete(oldImagePath);
+                    string oldImagePath = Path.Combine(uploadFolder, dbBrand.Image);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
                 }
 
                 dbBrand.Image = uniqueFileName;
+            }
+            else
+            {
+                dbBrand.Image = request.Image;
             }
 
             await _brandService.UpdateAsync(id, dbBrand);
             return RedirectToAction(nameof(Index));
         }
-
-
-
 
 
 

@@ -4,8 +4,9 @@ namespace AspMiniProject.ViewModels.Admin.Category
 {
     public class CategoryCreateVM
     {
-        [Required(ErrorMessage = "This input can not empty")]
-        [MaxLength(30, ErrorMessage = "Category length must be 30")]
-        public string? Name { get; set; }
+        [Required]
+        [MaxLength(255)]
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Category name can only contain letters and spaces.")]
+        public string Name { get; set; }
     }
 }

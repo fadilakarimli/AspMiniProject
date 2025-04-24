@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hXusqty+EsqQzcFcgzwfmuwofhwcU7eqw09ePjR9+XE=",
+  "Hash": "qNPnJUvotJBMrIeKAPzBAEHSfwDElk5D6BB2lY5f7jM=",
   "Source": "AspMiniProject",
   "BasePath": "_content/AspMiniProject",
   "Mode": "Default",
@@ -13298,25 +13298,6 @@
       "OriginalItemSpec": "wwwroot\\img\\8369152f-a4c7-4e78-8d18-712f8d7421a0_1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\87a2df4f-cebb-49ea-a124-5f95bbd9000b_1.png",
-      "SourceId": "AspMiniProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
-      "BasePath": "_content/AspMiniProject",
-      "RelativePath": "img/87a2df4f-cebb-49ea-a124-5f95bbd9000b_1.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\87a2df4f-cebb-49ea-a124-5f95bbd9000b_1.png"
-    },
-    {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\88cc5d19-a288-4f33-8f3b-85b04d99a911_5ec852b8-cf53-4e2e-863d-bfbdf9cf9e57_1.jpg",
       "SourceId": "AspMiniProject",
       "SourceType": "Discovered",
@@ -13469,25 +13450,6 @@
       "OriginalItemSpec": "wwwroot\\img\\about.jpg"
     },
     {
-      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\afc5e53b-7dfe-41ca-9b56-027f32276b2b_1.jpg",
-      "SourceId": "AspMiniProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
-      "BasePath": "_content/AspMiniProject",
-      "RelativePath": "img/afc5e53b-7dfe-41ca-9b56-027f32276b2b_1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\afc5e53b-7dfe-41ca-9b56-027f32276b2b_1.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\b4a5a0b4-c706-4476-b7d2-e6c66c562c6e_2.jpg",
       "SourceId": "AspMiniProject",
       "SourceType": "Discovered",
@@ -13581,6 +13543,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\banner\\2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\bb4589e2-4b8e-4c1e-a680-4b311e0db84e.jpg",
+      "SourceId": "AspMiniProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
+      "BasePath": "_content/AspMiniProject",
+      "RelativePath": "img/bb4589e2-4b8e-4c1e-a680-4b311e0db84e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bb4589e2-4b8e-4c1e-a680-4b311e0db84e.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\be9b532b-a939-45bf-8345-2f1b5d16d9c2.jpg",
@@ -14151,6 +14132,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\comment\\3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\d0c04148-4c3b-447d-be99-743af1ac2266.jpg",
+      "SourceId": "AspMiniProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\",
+      "BasePath": "_content/AspMiniProject",
+      "RelativePath": "img/d0c04148-4c3b-447d-be99-743af1ac2266.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\d0c04148-4c3b-447d-be99-743af1ac2266.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\wwwroot\\img\\d1365df5-2019-4ae3-a963-dbf508cb1e24-1.jpg",

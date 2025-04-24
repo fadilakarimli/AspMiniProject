@@ -4,6 +4,7 @@ using AspMiniProject.Services.Interfaces;
 using AspMiniProject.ViewModels.Admin.Product;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace AspMiniProject.Services
 {
@@ -100,8 +101,14 @@ namespace AspMiniProject.Services
 
             if (product == null) return;
 
-            product.Name = request.Name;
-            product.Price = request.Price;
+            if (request.Price <= 0)
+            {
+                throw new Exception("Price must be a positive number.");
+            }
+
+            product.Name = request.Name ?? product.Name;
+            product.Price = request.Price ?? product.Price;
+
             product.CategoryId = request.CategoryId;
 
             if (request.Images != null && request.Images.Count > 0)
@@ -132,6 +139,11 @@ namespace AspMiniProject.Services
 
             await _context.SaveChangesAsync();
         }
+
+
+
+
+
 
         public async Task DeleteProductAsync(int id)
         {

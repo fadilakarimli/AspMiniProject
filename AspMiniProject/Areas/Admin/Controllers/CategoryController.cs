@@ -27,7 +27,6 @@ namespace AspMiniProject.Areas.Admin.Controllers
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CategoryCreateVM request)
@@ -37,9 +36,19 @@ namespace AspMiniProject.Areas.Admin.Controllers
                 return View(request);
             }
 
-            await _categoryService.CreateCategoryAsync(request); 
-            return RedirectToAction(nameof(Index));  
+            try
+            {
+                await _categoryService.CreateCategoryAsync(request);
+                return RedirectToAction(nameof(Index));  
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message); 
+                return View(request); 
+            }
         }
+
+
 
         [HttpGet]
         public async Task<IActionResult> Detail(int? id)
