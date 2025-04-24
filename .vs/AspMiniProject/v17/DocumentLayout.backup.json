@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\areas\\admin\\controllers\\newslettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\areas\\admin\\controllers\\newslettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\areas\\admin\\views\\newsletter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\areas\\admin\\views\\newsletter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\controllers\\newslettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\controllers\\newslettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\services\\newsletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\services\\newsletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\services\\interfaces\\inewsletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\services\\interfaces\\inewsletterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|c:\\users\\asus\\desktop\\aspminiproject\\aspminiproject\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63117D75-C3F2-4772-9C14-0A68656A6606}|AspMiniProject\\AspMiniProject.csproj|solutionrelative:aspminiproject\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,11 +66,102 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "AspMiniProject\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:54:34.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AspMiniProject\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:54:33.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NewsletterController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Controllers\\NewsletterController.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Controllers\\NewsletterController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Controllers\\NewsletterController.cs",
+              "RelativeToolTip": "AspMiniProject\\Controllers\\NewsletterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:45:57.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NewsletterService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\NewsletterService.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Services\\NewsletterService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\NewsletterService.cs",
+              "RelativeToolTip": "AspMiniProject\\Services\\NewsletterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:43:31.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "INewsletterService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\Interfaces\\INewsletterService.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Services\\Interfaces\\INewsletterService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\Interfaces\\INewsletterService.cs",
+              "RelativeToolTip": "AspMiniProject\\Services\\Interfaces\\INewsletterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:43:27.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewsletterController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Controllers\\NewsletterController.cs",
+              "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Controllers\\NewsletterController.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Controllers\\NewsletterController.cs",
+              "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Controllers\\NewsletterController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:43:07.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Newsletter\\Index.cshtml",
+              "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Views\\Newsletter\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Newsletter\\Index.cshtml",
+              "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Views\\Newsletter\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwBkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T04:42:50.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Views\\Category\\Create.cshtml",
               "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Views\\Category\\Create.cshtml",
@@ -50,12 +169,11 @@
               "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Views\\Category\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T03:36:22.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T03:36:22.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "CategoryCreateVM.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\ViewModels\\Admin\\Category\\CategoryCreateVM.cs",
               "RelativeDocumentMoniker": "AspMiniProject\\ViewModels\\Admin\\Category\\CategoryCreateVM.cs",
@@ -63,17 +181,16 @@
               "RelativeToolTip": "AspMiniProject\\ViewModels\\Admin\\Category\\CategoryCreateVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T03:29:03.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T03:29:03.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "AspMiniProject\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\CategoryService.cs*",
-              "RelativeToolTip": "AspMiniProject\\Services\\CategoryService.cs*",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\CategoryService.cs",
+              "RelativeToolTip": "AspMiniProject\\Services\\CategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T03:27:40.872Z",
@@ -81,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Controllers\\CategoryController.cs",
@@ -89,12 +206,11 @@
               "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T03:27:21.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T03:27:21.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "ProductEditVM.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\ViewModels\\Admin\\Product\\ProductEditVM.cs",
               "RelativeDocumentMoniker": "AspMiniProject\\ViewModels\\Admin\\Product\\ProductEditVM.cs",
@@ -102,12 +218,11 @@
               "RelativeToolTip": "AspMiniProject\\ViewModels\\Admin\\Product\\ProductEditVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T03:19:52.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T03:19:52.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "AspMiniProject\\Areas\\Admin\\Controllers\\ProductController.cs",
@@ -115,12 +230,11 @@
               "RelativeToolTip": "AspMiniProject\\Areas\\Admin\\Controllers\\ProductController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T03:19:10.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T03:19:10.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\AspMiniProject\\AspMiniProject\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "AspMiniProject\\Services\\ProductService.cs",
@@ -128,8 +242,7 @@
               "RelativeToolTip": "AspMiniProject\\Services\\ProductService.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAYwGcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T03:19:03.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T03:19:03.012Z"
             }
           ]
         }
